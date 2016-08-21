@@ -10,3 +10,12 @@
 [submodule "bundle/vim-pathogen"]
 	path = bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
+[submodule "bundle/desert-warm"]
+	path = bundle/desert-warm
+	url = https://github.com/rainux/vim-desert-warm-256
+[submodule "bundle/vim-lucius"]
+	path = bundle/vim-lucius
+	url = https://github.com/jonathanfilip/vim-lucius
+[submodule "bundle/iceberg"]
+	path = bundle/iceberg
+	url = https://github.com/cocopon/iceberg.vim/
