@@ -43,10 +43,10 @@ let hlstate=1
 " Don't jump when searching
 nnoremap * :keepjumps normal *``<cr>
 
-" colorscheme desert-warm-256
+
+colorscheme desert-warm-256
 " colorscheme iceberg
 " colorscheme lucius
-colorscheme base16-solarized-dark
 
 set guifont=Consolas:h11
 set history=500
