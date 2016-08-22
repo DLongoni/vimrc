@@ -17,14 +17,13 @@ syntax on
 "line numbers
 set number
 set rnu
-
 set secure
 
 set showmatch " jumps to matching bracket
 
 "tab navigation
-map J :tabn<CR>
-map K :tabp<CR>
+map <C-j> :tabn<CR>
+map <C-k> :tabp<CR>
 
 filetype plugin indent on
 au FileType py set autoindent
@@ -44,9 +43,10 @@ let hlstate=1
 " Don't jump when searching
 nnoremap * :keepjumps normal *``<cr>
 
-colorscheme desert-warm-256
+" colorscheme desert-warm-256
 " colorscheme iceberg
 " colorscheme lucius
+colorscheme base16-solarized-dark
 
 set guifont=Consolas:h11
 set history=500
@@ -62,7 +62,7 @@ map <space>m :set paste<CR>m`o<Esc>``:set nopaste<CR>
 map <space>n :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 "Directory for swp files
-set directory=/home/davide/.vim/swp,.
+set directory=/home/davide/.vim/swp,$HOME\swp,. " Linux, then Windows
 
 " gvim : switch off sounds
 set noerrorbells
