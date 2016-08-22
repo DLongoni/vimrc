@@ -49,8 +49,13 @@ colorscheme desert-warm-256
 map <space>m :set paste<CR>m`o<Esc>``:set nopaste<CR>
 map <space>n :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
-"Change marker for latex
-au FileType tex set foldmarker={tex-,-tex}
-
 "Directory for swp files
 set directory=/home/davide/.vim/swp,.
+
+" gvim : switch off sounds
+set noerrorbells
+set vb t_vb=
+if has("gui_running")
+	autocmd GUIEnter * set vb t_vb=
+endif
+
