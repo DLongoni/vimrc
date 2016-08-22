@@ -88,5 +88,4 @@ if $USERDOMAIN!="SPIMI"
     endif
     let g:airline_symbols.space="\ua0"
   endif
-  " TODO: aggiungo entry per syntastic per php
 endif
