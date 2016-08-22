@@ -81,10 +81,12 @@ let g:airline#extensions#tabline#enabled=1
 " Exclude the domain where I do not have any admin right, so that I can't
 " install neither fonts, not python, and so on
 if $USERDOMAIN!="SPIMI"  
-  let g:airline_powerline_fonts=1
-  if !exists('g:airline_symbols')
-    let g:airline_symbols={}
+  if $SSH_CLIENT=="" "I will use this only if I'm not ssh-ing
+    let g:airline_powerline_fonts=1
+    if !exists('g:airline_symbols')
+      let g:airline_symbols={}
+    endif
+    let g:airline_symbols.space="\ua0"
   endif
-  let g:airline_symbols.space="\ua0"
   " TODO: aggiungo entry per syntastic per php
 endif
