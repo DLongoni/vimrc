@@ -19,3 +19,6 @@
 [submodule "bundle/iceberg"]
 	path = bundle/iceberg
 	url = https://github.com/cocopon/iceberg.vim/
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
