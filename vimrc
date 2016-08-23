@@ -11,6 +11,7 @@ set shiftwidth=2
 set expandtab
 set softtabstop=0
 set smarttab
+set hidden
 
 syntax on
 
@@ -22,8 +23,8 @@ set secure
 set showmatch " jumps to matching bracket
 
 "tab navigation
-map <C-j> :tabn<CR>
-map <C-k> :tabp<CR>
+map <C-j> :bnext<CR>
+map <C-k> :bprevious<CR>
 
 filetype plugin indent on
 au FileType py set autoindent
@@ -63,6 +64,11 @@ map <space>n :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 "Directory for swp files
 set directory=/home/davide/.vim/swp,$HOME\swp,. " Linux, then Windows
+
+" Emmet zencoding remap
+nmap <C-z> <C-y>,
+imap <C-z> <C-y>,
+vmap <C-z> <C-y>,
 
 " gvim : switch off sounds
 set noerrorbells
