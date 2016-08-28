@@ -12,6 +12,7 @@ set expandtab
 set softtabstop=0
 set smarttab
 set hidden
+set foldmethod=marker
 
 syntax on
 

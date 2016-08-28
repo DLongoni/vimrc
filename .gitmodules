@@ -51,4 +51,4 @@
 	url = https://github.com/mattn/emmet-vim
 [submodule "bundle/lilypond"]
 	path = bundle/lilypond
-	url = http://github.com/gisraptor/vim-lilypond-integrator
+	url = https://github.com/gisraptor/vim-lilypond-integrator
