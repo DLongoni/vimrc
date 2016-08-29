@@ -52,3 +52,6 @@
 [submodule "bundle/lilypond"]
 	path = bundle/lilypond
 	url = https://github.com/gisraptor/vim-lilypond-integrator
+[submodule "bundle/MatchTagAlways"]
+	path = bundle/MatchTagAlways
+	url = https://github.com/Valloric/MatchTagAlways
