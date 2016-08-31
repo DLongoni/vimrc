@@ -24,8 +24,8 @@ set secure
 set showmatch " jumps to matching bracket
 
 "tab navigation
-map <C-j> :bnext<CR>
-map <C-k> :bprevious<CR>
+map <C-k> :bnext<CR>
+map <C-j> :bprevious<CR>
 
 filetype plugin indent on
 au FileType py set autoindent
