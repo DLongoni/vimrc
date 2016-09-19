@@ -24,8 +24,8 @@ set secure
 set showmatch " jumps to matching bracket
 
 "tab navigation
-map <C-k> :bnext<CR>
-map <C-j> :bprevious<CR>
+noremap <C-k> :bnext<CR>
+noremap <C-j> :bprevious<CR>
 
 filetype plugin indent on
 au FileType py set autoindent
@@ -60,16 +60,16 @@ set splitright
 set laststatus=2
 
 " Newline above or below cursor without moving cursor, staying in normal mode
-map <space>m :set paste<CR>m`o<Esc>``:set nopaste<CR>
-map <space>n :set paste<CR>m`O<Esc>``:set nopaste<CR>
+noremap <space>m :set paste<CR>m`o<Esc>``:set nopaste<CR>
+noremap <space>n :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 "Directory for swp files
 set directory=/home/davide/.vim/swp,$HOME\swp,. " Linux, then Windows
 
 " Emmet zencoding remap
-nmap <C-z> <C-y>,
-imap <C-z> <C-y>,
-vmap <C-z> <C-y>,
+nnoremap <C-z> <C-y>,
+inoremap <C-z> <C-y>,
+vnoremap <C-z> <C-y>,
 
 " gvim : switch off sounds
 set noerrorbells
