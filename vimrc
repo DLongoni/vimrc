@@ -77,6 +77,8 @@ set linespace=0
 set scrolloff=3 " Keep 3 rows above and below the cursor row inside window limits
 set laststatus=2 " Always add status line to new windows and buffers
 
+let g:markdown_enable_spell_checking = 0 " Disable vim-markup spell check
+
 colorscheme desert-warm-256
 " colorscheme iceberg
 " colorscheme lucius
