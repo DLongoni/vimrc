@@ -49,9 +49,6 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim
-[submodule "bundle/lilypond"]
-	path = bundle/lilypond
-	url = https://github.com/gisraptor/vim-lilypond-integrator
 [submodule "bundle/MatchTag"]
 	path = bundle/MatchTag
 	url = https://github.com/gregsexton/MatchTag
