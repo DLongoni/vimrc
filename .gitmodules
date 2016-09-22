@@ -55,3 +55,6 @@
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/gabrielelana/vim-markdown
+[submodule "bundle/vim-lilypond"]
+	path = bundle/vim-lilypond
+	url = https://github.com/DLongoni/vim-lilypond-integrator
