@@ -26,11 +26,14 @@ nnoremap <leader>ev :vs $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 " Use jk to exit insert mode
 inoremap jk <esc>
-inoremap <esc> <nop>
+inoremap JK <esc>
 noremap <Left> <nop>
 noremap <Right> <nop>
 noremap <Up> <nop>
 noremap <Up> <nop>
+" When pressing esc in multi cursor insert mode go back to multi cursor normal
+" mode instead of quitting multi cursor
+let g:multi_cursor_exit_from_insert_mode=0
 " }}}
 
 " Basic Settings {{{
