@@ -51,6 +51,8 @@ set foldmethod=marker
 set secure
 set showmatch " jumps to matching bracket
 
+set encoding=utf-8
+
 filetype plugin indent on
 au FileType py set autoindent
 au FileType py set smartindent
