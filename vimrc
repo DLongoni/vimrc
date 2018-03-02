@@ -105,6 +105,7 @@ if has("gui_running")
 endif
 
 let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts=1
 
 " Exclude the domain where I do not have any admin right, so that I can't
 " install neither fonts, not python, and so on
