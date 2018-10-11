@@ -16,9 +16,6 @@
 [submodule "bundle/vim-lucius"]
 	path = bundle/vim-lucius
 	url = https://github.com/jonathanfilip/vim-lucius
-[submodule "bundle/iceberg"]
-	path = bundle/iceberg
-	url = https://github.com/cocopon/iceberg.vim/
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
@@ -58,3 +55,9 @@
 [submodule "bundle/vim-lilypond"]
 	path = bundle/vim-lilypond
 	url = https://github.com/DLongoni/vim-lilypond-integrator
+[submodule "bundle/python-mode"]
+	path = bundle/python-mode
+	url = https://github.com/python-mode/python-mode.git
+[submodule "bundle/vim-sublime-monokai"]
+	path = bundle/vim-sublime-monokai
+	url = https://github.com/ErichDonGubler/vim-sublime-monokai

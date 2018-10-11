@@ -3,6 +3,7 @@ execute pathogen#infect()
 execute pathogen#helptags()
 
 set nocompatible
+set t_Co=256
 
 " Key Mappings {{{
 let mapleader=" "
@@ -18,7 +19,7 @@ noremap <leader>m :set paste<CR>m`o<Esc>``:set nopaste<CR>
 noremap <leader>n :set paste<CR>m`O<Esc>``:set nopaste<CR>
 " Emmet zencoding remap
 nnoremap <leader>z <C-y>,
-inoremap <leader>z <C-y>,
+" inoremap <leader>z <C-y>, " this causes issues when typing
 vnoremap <leader>z <C-y>,
 " Edit My Vimrc
 nnoremap <leader>ev :vs $MYVIMRC<cr>
@@ -34,6 +35,18 @@ noremap <Up> <nop>
 " When pressing esc in multi cursor insert mode go back to multi cursor normal
 " mode instead of quitting multi cursor
 let g:multi_cursor_exit_from_insert_mode=0
+
+vnoremap < <gv 
+vnoremap > >gv 
+" add space after commas without a space (pep8)
+nnoremap <leader>sc :s/,\(\S\)\@=/, /g<cr> :nohlsearch<cr>
+nnoremap <leader>sa i<space><esc>la<space><esc>h
+nnoremap <leader>sd hxlxh
+nnoremap <leader>n  A<space><space>#<space>NOQA<esc>0
+nnoremap <leader>w  <C-w>
+" PyMode
+let g:pymode_rope = 1
+let g:pymode_rope_rename_bind = '<leader>f'
 " }}}
 
 " Basic Settings {{{
@@ -69,7 +82,9 @@ set wildmenu
 
 "Directory for swp files
 set directory=/home/davide/.vim/swp,$HOME\swp,. " Linux, then Windows
-
+let g:pymode_python = 'python3'
+let g:pymode_lint_ignore = ['E221']
+" let &pythonthreedll = 'C:\Users\u368208\AppData\Local\Programs\Python\Python36\python36.dll'
 " }}}
 
 " GUI {{{
@@ -84,37 +99,25 @@ set laststatus=2 " Always add status line to new windows and buffers
 
 let g:markdown_enable_spell_checking = 0 " Disable vim-markup spell check
 
-colorscheme desert-warm-256
-" colorscheme iceberg
-" colorscheme lucius
+colorscheme monokai
+" colorscheme desert-warm-256
 
-" set cursorline " too low contrast with desert colorscheme
 set splitright " vertical split puts the new window on the right
 
-" gvim : switch off sounds
+" GVIM
 set noerrorbells
 set visualbell t_vb=
-
-if has("gui_running")
-  autocmd GUIEnter * set vb t_vb=
-  " gvim: hide upper bars
-  set guioptions-=T
-  set guioptions-=m
-  set guioptions-=e
-  set mouse= " turn off mouse on gvim
-endif
+autocmd GUIEnter * set vb t_vb=
+" gvim: hide upper bars
+set guioptions-=T
+set guioptions-=m
+set guioptions-=e
+set mouse= " turn off mouse on gvim
 
 let g:airline#extensions#tabline#enabled=1
-
-" Exclude the domain where I do not have any admin right, so that I can't
-" install neither fonts, not python, and so on
-if $USERDOMAIN!="SPIMI"  
-  if $SSH_CLIENT=="" "I will use this only if I'm not ssh-ing
-    let g:airline_powerline_fonts=1
-    if !exists('g:airline_symbols')
-      let g:airline_symbols={}
-    endif
-    let g:airline_symbols.space="\ua0"
-  endif
+let g:airline_powerline_fonts=1
+if !exists('g:airline_symbols')
+  let g:airline_symbols={}
 endif
+let g:airline_symbols.space="\ua0"
 " }}}
