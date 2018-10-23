@@ -1,4 +1,4 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime bundle/vim-pathogen/autoload/pathogen.vim 
 execute pathogen#infect()
 execute pathogen#helptags()
 
@@ -10,17 +10,12 @@ let mapleader=" "
 " Tab Navigation
 noremap <leader>k :bnext<CR>
 noremap <leader>j :bprevious<CR>
-" Ctrl+c to toggle highlight.
-nnoremap <c-c> :nohlsearch<cr>
+nnoremap <leader>c :nohlsearch<cr>
 " Don't jump when searching
 nnoremap * :keepjumps normal *``<cr>
 " Newline above or below cursor without moving cursor, staying in normal mode
 noremap <leader>m :set paste<CR>m`o<Esc>``:set nopaste<CR>
 noremap <leader>n :set paste<CR>m`O<Esc>``:set nopaste<CR>
-" Emmet zencoding remap
-nnoremap <leader>z <C-y>,
-" inoremap <leader>z <C-y>, " this causes issues when typing
-vnoremap <leader>z <C-y>,
 " Edit My Vimrc
 nnoremap <leader>ev :vs $MYVIMRC<cr>
 " Source My Vimrc
@@ -42,11 +37,17 @@ vnoremap > >gv
 nnoremap <leader>sc :s/,\(\S\)\@=/, /g<cr> :nohlsearch<cr>
 nnoremap <leader>sa i<space><esc>la<space><esc>h
 nnoremap <leader>sd hxlxh
-nnoremap <leader>n  A<space><space>#<space>NOQA<esc>0
+nnoremap <leader>u  A<space><space>#<space>NOQA<esc>0
 nnoremap <leader>w  <C-w>
 " PyMode
 let g:pymode_rope = 1
 let g:pymode_rope_rename_bind = '<leader>f'
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 " }}}
 
 " Basic Settings {{{
@@ -92,15 +93,15 @@ let g:pymode_lint_ignore = ['E221']
 set number
 set relativenumber
 set ruler
-set guifont=Consolas:h11
 set linespace=0
 set scrolloff=3 " Keep 3 rows above and below the cursor row inside window limits
 set laststatus=2 " Always add status line to new windows and buffers
 
 let g:markdown_enable_spell_checking = 0 " Disable vim-markup spell check
+hi ColorColumn guibg=#666666
 
+" colorscheme sublimemonokai
 colorscheme monokai
-" colorscheme desert-warm-256
 
 set splitright " vertical split puts the new window on the right
 
@@ -112,14 +113,21 @@ autocmd GUIEnter * set vb t_vb=
 set guioptions-=T
 set guioptions-=m
 set guioptions-=e
+set guioptions-=r
 set mouse= " turn off mouse on gvim
 
+autocmd GUIEnter * simalt ~x " fullscreen?
 let g:airline#extensions#tabline#enabled=1
+
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h10.5
+" set guifont=Noto\ Mono\ for\ Powerline:h10.5
+" set guifont=Consolas:h11
 let g:airline_powerline_fonts=1
-set guifont=Inconsolata\ for\ Powerline:h12
-let g:airline_powerline_fonts=1
-if !exists('g:airline_symbols')
-    let g:airline_symbols={}
-endif
-let g:airline_symbols.space="\ua0"
+
+set cmdheight=2
+autocmd GUIEnter * WToggleClean
+autocmd GUIEnter * WToggleFullscreen
+autocmd GUIEnter * WSetAlpha 250
+autocmd GUIEnter * AirlineTheme base16_monokai
+" base16_monokai tomorrow base16_bright base16_ashes
 " }}}

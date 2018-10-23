@@ -13,9 +13,6 @@
 [submodule "bundle/desert-warm"]
 	path = bundle/desert-warm
 	url = https://github.com/rainux/vim-desert-warm-256
-[submodule "bundle/vim-lucius"]
-	path = bundle/vim-lucius
-	url = https://github.com/jonathanfilip/vim-lucius
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline
@@ -61,3 +58,15 @@
 [submodule "bundle/vim-sublime-monokai"]
 	path = bundle/vim-sublime-monokai
 	url = https://github.com/ErichDonGubler/vim-sublime-monokai
+[submodule "bundle/vim-monokai"]
+	path = bundle/vim-monokai
+	url = https://github.com/crusoexia/vim-monokai
+[submodule "bundle/wimproved.vim"]
+	path = bundle/wimproved.vim
+	url = https://github.com/kkoenig/wimproved.vim
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets
